@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/url_tv"
+        android:textColor="@color/dark"
+        android:textSize="22sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:autofillHints=""
+        android:hint="@string/https"
+        android:inputType="textUri"
+        android:text="@string/url"
+        app:layout_constraintTop_toBottomOf="@id/tv_url"
+        tools:ignore="UnusedAttribute" />
+
+    <RadioGroup
+        android:id="@+id/rg_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_url"
+        >
+
+        <RadioButton
+            android:checked="true"
+            android:id="@+id/rb_save_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save_in"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_save_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/save_out" />
+    </RadioGroup>
+
+
+    <LinearLayout
+        android:id="@+id/linear_layout_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/rg_save">
+
+        <Button
+            android:id="@+id/bt_url"
+            style="@style/TextAppearance.AppCompat.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:onClick="bt_view_picture"
+            android:text="@string/bt_view_picture"
+            android:textColor="@color/dark" />
+
+        <Button
+            style="@style/TextAppearance.AppCompat.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:onClick="bt_save_picture"
+            android:text="@string/save_picture"
+            android:textColor="@color/dark" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear_layout_bt">
+
+        <ImageView
+            android:id="@+id/iv_url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:contentDescription="@string/image_view" />
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

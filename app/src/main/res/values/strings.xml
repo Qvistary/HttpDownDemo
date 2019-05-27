@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">HttpDownDemo</string>
+    <string name="url_tv">请输入要下载图片的网站:</string>
+    <string name="url">https://www.baidu.com/img/bd_logo1.png</string>
+    <string name="image_view">This is ImageView</string>
+    <string name="bt_view_picture">预览图片</string>
+    <string name="save_picture">保存图片</string>
+    <string name="https">Https</string>
+    <string name="save_in">保存在内部</string>
+    <string name="save_out">保存在外部</string>
+</resources>
